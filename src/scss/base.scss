@@ -1,3 +1,4 @@
+/* stylelint-disable at-rule-no-unknown */
 @import './utils/breakpoints';
 @import './utils/reset';
 
@@ -8,6 +9,40 @@
 
 button {
   background: 0;
-  border: 0;
   cursor: pointer;
+  padding: 4px 10px;
+  margin: 10px;
+  border: 2px solid #000;
 }
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#lederboard-content {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+#site-content {
+  padding: 1rem;
+}
+
+@import './recent-scores';
+@import './add-form';
