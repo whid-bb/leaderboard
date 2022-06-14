@@ -1,0 +1,13 @@
+@import './utils/breakpoints';
+@import './utils/reset';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: 0;
+  border: 0;
+  cursor: pointer;
+}
