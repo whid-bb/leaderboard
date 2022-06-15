@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leaderboard</title>
 <script defer src="runtime.js"></script><script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
@@ -18,26 +17,25 @@
           <button type="button" id="refresh-scores">Refresh</button>
         </header>
         <div id="scores-content">
-          <div id="dummy-data">
-            <ul>
-              <li>Name: 100</li>
-              <li>Name: 400</li>
-              <li>Name: 500</li>
-              <li>Name: 700</li>
-              <li>Name: 10</li>
-              <li>Name: 20</li>
-              <li>Name: 10</li>
-              <li>Name: 700</li>
-            </ul>
-          </div>
+
+          <ul>
+            <li>Name: 100</li>
+            <li>Name: 400</li>
+            <li>Name: 500</li>
+            <li>Name: 700</li>
+            <li>Name: 10</li>
+            <li>Name: 20</li>
+            <li>Name: 10</li>
+            <li>Name: 700</li>
+          </ul>
         </div>
       </div>
       <div id="add-scores-form">
         <h2>Add your score</h2>
         <form>
-          <input type="text" name="name" id="name" placeholder="Your name">
+          <input type="text" name="user" id="user" placeholder="User name">
           <input type="number" name="score-num" id="score-num" placeholder="Your score">
-          <button type="submit">Submit</button>
+          <button type="submit" id="save-score">Submit</button>
         </form>
       </div>
     </section>
