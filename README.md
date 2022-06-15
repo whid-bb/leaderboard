@@ -2,6 +2,7 @@
 
 App uses Leaderboard API to display user's scores.
 
+
 ## Built With
 
 - HTML
@@ -19,7 +20,7 @@ To build run in your terminal:
 
 👤 **whid-bb**
 
-- LinkedIn: [https://www.linkedin.com/in/bartosz-ka%C5%BAmierczak-46a810235/]
+- [LinkedIn](https://www.linkedin.com/in/bartosz-ka%C5%BAmierczak-46a810235/)
 
 ## 🤝 Contributing
 
