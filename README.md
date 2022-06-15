@@ -1,4 +1,6 @@
-# [project name]
+# Leaderboard
+
+App uses Leaderboard API to display user's scores.
 
 ## Built With
 
