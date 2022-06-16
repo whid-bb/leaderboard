@@ -15,11 +15,15 @@ button {
   padding: 4px 10px;
   margin: 10px;
   border: 2px solid #000;
+
   @include round;
+
   transition: all 0.1s ease-in-out;
+
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
+
   &:active {
     background: #ccc;
   }
@@ -49,7 +53,6 @@ body {
 #lederboard-content {
   display: flex;
   justify-content: center;
-
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;

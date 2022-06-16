@@ -59,7 +59,7 @@ class LeaderboardApi {
     });
   };
 
-  async getScores(e = null) {
+  async getScores() {
     let scores;
     try {
       scores = await this.getUserScoresPromise();
@@ -79,10 +79,7 @@ class LeaderboardApi {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-
-      }
-
-      );
+      });
     } catch (e) {
       console.error(`Error: ${e}`);
     }

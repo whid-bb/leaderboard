@@ -1,9 +1,8 @@
 #scores {
   display: flex;
   flex-direction: column;
-
   min-width: 17rem;
-
+  /* stylelint-disable-next-line */
   @include sm {
     margin-right: 40px;
   }
@@ -15,7 +14,9 @@
   width: 100%;
   margin-top: 10px;
   position: relative;
+  /* stylelint-disable-next-line */
   @include round;
+
   overflow: hidden;
 
   li {
