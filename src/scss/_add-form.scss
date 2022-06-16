@@ -9,14 +9,14 @@
   form {
     /* stylelint-disable-next-line */
     @extend #add-scores-form;
-
+    position: relative;
     align-items: flex-end;
 
     input {
       border: 1px solid black;
       margin-bottom: 10px;
       padding: 5px;
-
+      @include round;
       &:last-child {
         margin-bottom: 0;
       }

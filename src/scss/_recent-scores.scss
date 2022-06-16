@@ -1,8 +1,12 @@
 #scores {
   display: flex;
   flex-direction: column;
-  margin-right: 40px;
+
   min-width: 17rem;
+
+  @include sm {
+    margin-right: 40px;
+  }
 }
 
 #scores-content {
@@ -10,13 +14,16 @@
   border: 3px solid #000;
   width: 100%;
   margin-top: 10px;
+  position: relative;
+  @include round;
+  overflow: hidden;
 
   li {
     &:nth-child(2n) {
       background-color: #ccc;
     }
 
-    padding: 4px;
+    padding: 10px;
   }
 }
 

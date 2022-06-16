@@ -1,6 +1,8 @@
 /* stylelint-disable at-rule-no-unknown */
 @import './utils/breakpoints';
 @import './utils/reset';
+@import './utils/utils';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap');
 
 * {
   margin: 0;
@@ -13,17 +15,26 @@ button {
   padding: 4px 10px;
   margin: 10px;
   border: 2px solid #000;
+  @include round;
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    background: #ccc;
+  }
 }
 
 h1 {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 body {
@@ -32,16 +43,30 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 #lederboard-content {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include sm {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 #site-content {
   padding: 1rem;
+}
+
+.load-spinner {
+  position: absolute;
+  top: -24px;
 }
 
 @import './recent-scores';

@@ -8,7 +8,7 @@ class LeaderboardApi {
   }
 
   init = () => {
-    this.refreshBtn.addEventListener('click', () => this.getScores());
+    this.refreshBtn.addEventListener('click', () => this.getScores(this.board));
     this.submitBtn.addEventListener('click', (e) => this.submitForm(e));
     this.getScores();
   };
@@ -27,14 +27,22 @@ class LeaderboardApi {
       .then((json) => json);
   };
 
+  loadingGfx = (el) => {
+    el.insertAdjacentHTML('beforeend', "<p class='load-spinner'>Loading!</p>");
+  };
+
+  removeLoadGfx = (el) => {
+    el.closest('.load-spinner').remove();
+  };
+
   submitForm(e) {
     e.preventDefault();
     const form = this.submitBtn.closest('form');
     const formData = new FormData(form);
     const user = formData.get('user');
     const score = formData.get('score-num');
-
     this.saveData({ user, score });
+
     form.reset();
   }
 
@@ -51,9 +59,8 @@ class LeaderboardApi {
     });
   };
 
-  async getScores() {
+  async getScores(e = null) {
     let scores;
-
     try {
       scores = await this.getUserScoresPromise();
       this.renderList(scores.result);
@@ -72,7 +79,10 @@ class LeaderboardApi {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-      });
+
+      }
+
+      );
     } catch (e) {
       console.error(`Error: ${e}`);
     }
